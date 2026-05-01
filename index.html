@@ -18,6 +18,12 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=2434900703650123&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+
+<!-- Contentsquare Tracking -->
+<script src="https://t.contentsquare.net/uxa/7e09f1f22a648.js"></script>
+<!-- End Contentsquare Tracking -->
+
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Why You Can't Fall Asleep (Even When You're Exhausted) | Dream Patches</title>
@@ -272,6 +278,14 @@ src="https://www.facebook.com/tr?id=2434900703650123&ev=PageView&noscript=1"
   .hero h1,.hero-sub,.hero-meta { animation:fadeUp .8s ease both; }
   .hero-sub { animation-delay:.15s; }
   .hero-meta { animation-delay:.28s; }
+
+  /* ── MID-PAGE CTA ── */
+  .midpage-cta { text-align:center; padding:40px 24px; margin:8px 0 48px; background:var(--cream-dark); border-radius:10px; border:1px solid var(--warm-mid); }
+  .midpage-cta-text { font-family:'Playfair Display',serif; font-size:clamp(17px,2.2vw,21px); font-style:italic; color:var(--ink-soft); margin-bottom:20px; line-height:1.45; }
+  .midpage-cta-btn { display:inline-block; background:linear-gradient(135deg,#c4855a,#a0623e); color:#fff; font-family:'Source Serif 4',serif; font-size:16px; font-weight:600; padding:15px 36px; border-radius:6px; text-decoration:none; letter-spacing:.04em; box-shadow:0 4px 20px rgba(124,74,45,.3); transition:transform .2s ease,box-shadow .2s ease; }
+  .midpage-cta-btn:hover { transform:translateY(-2px); box-shadow:0 6px 28px rgba(124,74,45,.4); }
+  .midpage-cta-sub { font-size:13px; color:var(--ink-muted); letter-spacing:.05em; margin-top:14px; }
+  @media(max-width:600px){ .midpage-cta{ padding:28px 18px; } }
 </style>
 </head>
 <body>
@@ -375,6 +389,13 @@ src="https://www.facebook.com/tr?id=2434900703650123&ev=PageView&noscript=1"
     <p>They each try to address <em>one part</em> of the sleep equation — the hormone signal, the environment, the habit, the muscle tension. None of them address the core issue: <strong>your nervous system's inability to make the transition from day mode to night mode.</strong></p>
     <p>It's like trying to get your phone to stop running apps by dimming the screen. The screen looks dark. Everything underneath is still running.</p>
   </div>
+  <!-- MID-PAGE CTA 1: Peak frustration with old solutions -->
+  <div class="midpage-cta">
+    <p class="midpage-cta-text">Sound familiar? There&apos;s a reason nothing has worked &mdash; and a different way to fix it.</p>
+    <a href="#cta" class="midpage-cta-btn">See How Dream Patches Works &rarr;</a>
+    <p class="midpage-cta-sub">No melatonin &nbsp;&middot;&nbsp; Drug-free &nbsp;&middot;&nbsp; 60-Night Money-Back Guarantee</p>
+  </div>
+
 
   <div class="inline-quote">
     <p>"I don't think I have insomnia. I just can't shut my mind off."</p>
@@ -476,6 +497,13 @@ src="https://www.facebook.com/tr?id=2434900703650123&ev=PageView&noscript=1"
     <div class="ing-card"><div class="ing-icon">🌙</div><div class="ing-body"><div class="ing-name">Passionflower</div><span class="ing-role">Overthinking Quieter</span><p>Passionflower is specifically associated in the research with reducing the kind of circular, repetitive thinking that keeps overthinkers awake — the replayed conversations, the mental to-do lists, the 2 a.m. problem-solving loops. It doesn't numb the mind. It turns the volume down enough that sleep can move in through the gap. For the person whose brain simply won't stop talking, this may be the most important ingredient in the blend.</p></div></div>
   </div>
 
+  <!-- MID-PAGE CTA 2: After ingredients — mechanism understood -->
+  <div class="midpage-cta">
+    <p class="midpage-cta-text">Four ingredients. One simple patch. A completely different kind of night.</p>
+    <a href="#cta" class="midpage-cta-btn">Try Dream Patches Tonight &rarr;</a>
+    <p class="midpage-cta-sub">No melatonin &nbsp;&middot;&nbsp; Drug-free &nbsp;&middot;&nbsp; 60-Night Money-Back Guarantee</p>
+  </div>
+
   <!-- PEEL STICK EXHALE -->
   <div class="section-header" style="margin-top:16px;">
     <span class="overline">The nightly routine</span>
@@ -529,6 +557,15 @@ src="https://www.facebook.com/tr?id=2434900703650123&ev=PageView&noscript=1"
   </div>
 </section>
 
+<!-- MID-PAGE CTA 3: After reviews — trust at peak -->
+<div class="content-wrap">
+  <div class="midpage-cta" style="margin-top:48px;">
+    <p class="midpage-cta-text">Join thousands of people who stopped fighting sleep &mdash; and started drifting into it.</p>
+    <a href="#cta" class="midpage-cta-btn">Get Dream Patches &rarr;</a>
+    <p class="midpage-cta-sub">Free shipping &nbsp;&middot;&nbsp; No melatonin &nbsp;&middot;&nbsp; 60-Night Money-Back Guarantee</p>
+  </div>
+</div>
+
 <!-- OUTCOMES + BEFORE/AFTER -->
 <div class="content-wrap">
   <div class="section-header">
@@ -571,7 +608,7 @@ src="https://www.facebook.com/tr?id=2434900703650123&ev=PageView&noscript=1"
 </div>
 
 <!-- CTA -->
-<section class="cta-section">
+<section class="cta-section" id="cta">
   <div class="content-wrap">
     <p class="cta-eyebrow">Start tonight</p>
     <h2>Your Brain Has Been Waiting<br>for Permission to <em>Rest.</em></h2>
@@ -607,6 +644,14 @@ function toggleFaq(btn) {
   document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
   if (!isOpen) item.classList.add('open');
 }
+
+  document.querySelectorAll('a[href="#cta"]').forEach(function(link){
+    link.addEventListener('click', function(e){
+      e.preventDefault();
+      var target = document.getElementById('cta');
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
 </script>
 </body>
 </html>
